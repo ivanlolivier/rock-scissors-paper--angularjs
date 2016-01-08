@@ -1,37 +1,0 @@
-10
-
-dir
-4
-http://54.187.69.126/svn/protesteaqui/trunk/assets/bootstrap
-http://54.187.69.126/svn/protesteaqui
-
-
-
-2014-08-16T16:47:29.421054Z
-4
-ivan
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-b11b0b1d-5b13-4719-9dba-64b288e9642e
-
-css
-dir
-
-fonts
-dir
-
-js
-dir
-
