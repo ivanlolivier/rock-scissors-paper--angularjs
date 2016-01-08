@@ -1,0 +1,52 @@
+<div style="width: 40%; float: left;">
+	
+	<div ng-init="step=1">
+		<div ng-show="step==1">
+			<h1 style="text-align: center;margin-bottom: 25px;">Round {{ round }}<br /><span style="font-weight: bold;">{{ player1 }}</span> is your turn!</h1>
+			
+			<span style="display: inline-block; width: 150px;">Select your move:</span> 
+			<select ng-model="move1" required class="input-lg" style="padding:5px 10px; height:auto; line-height:auto; font-size:14px; margin:10px 0;min-width: 200px;">
+				<option value=""></option>
+				<option ng-repeat="move in moves | orderBy:name">{{ move.name }}</option>
+			</select>
+			<div style="text-align: right; margin-top: 20px;">
+				<button ng-disabled="!(!!move1)" ng-click="step=2" class="btn btn-primary">Next</button>
+			</div>
+		</div>
+		
+		<div ng-show="step==2">
+			<h1 style="text-align: center;margin-bottom: 25px;">Round {{ round }}<br /><span style="font-weight: bold;">{{ player2 }}</span> is your turn!</h1>
+	
+			<span style="display: inline-block; width: 150px;">Select your move:</span>
+			<select ng-model="move2" required class="input-lg" style="padding:5px 10px; height:auto; line-height:auto; font-size:14px; margin:10px 0;min-width: 200px;">
+				<option value=""></option>
+				<option ng-repeat="move in moves | orderBy:name">{{ move.name }}</option>
+			</select>
+			<div style="text-align: right; margin-top: 20px;">
+				<button ng-click="step=1" class="btn">Back</button>
+				<button ng-disabled="!(!!move2)" ng-click="compete();step=1;" class="btn btn-primary">Compete</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div style="width: 40%; float: right;">
+	
+	<h1>Score</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Round</th>
+				<th>Winner</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="score in scores track by $index" ng-if="$index > 0">
+				<td>#{{ $index }}</td>
+				<td>{{ score }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div style="clear: both;"></div>

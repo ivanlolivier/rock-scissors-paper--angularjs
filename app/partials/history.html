@@ -1,0 +1,15 @@
+<div>
+	<h1>Match History</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Winner</th>
+				<th>Looser</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="match in history"><td>{{match.winner}}</td><td>{{match.looser}}</td></tr>
+		</tbody>
+	</table>
+	<button class="btn btn-primary" ng-click="clearHistory()">Clear history</button>
+</div>

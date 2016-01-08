@@ -1,0 +1,123 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #404040;
+    direction: ltr;
+    font-family: Arial,sans-serif;
+}
+body{
+    background-color: #E3EAEF;
+    font-size: 13px;
+    padding-top: 20px;
+}
+
+#header_content{
+    height: auto !important;
+    min-height: 100%;
+}
+#header{
+    text-align: center;
+}
+#header2{
+    text-align: left;
+}
+#header2 h1{
+	margin: 0;
+	padding: 10px;
+	font-size: 24px;
+}
+#header2 img{
+	margin-right: 10px;
+    position: relative;
+    top: -3px;
+    vertical-align: middle;
+}
+#content{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#content.backwhite{
+    background-color: white;	
+}
+
+.signup-box {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #E5E5E5;
+    padding: 20px 25px 15px;
+    width: 400px;
+    margin: 0 auto;
+}
+.win-box {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #E5E5E5;
+    padding: 20px 25px 15px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.win-box a {
+    margin: 25px 0;
+}
+.signup-box input[type="text"], .signup-box input[type="password"] {
+    background-color: #FFFFFF;
+    border-color: #C0C0C0 #D9D9D9 #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+    border-style: solid;
+    border-width: 1px;
+    color: #333333;
+    display: inline-block;
+    font-size: 15px;
+    height: 32px;
+    line-height: 27px;
+    margin-top: 0.5em;
+    padding-left: 8px;
+    vertical-align: top;
+    width: 100%;
+}
+#pre-footer {
+    clear: both;
+    padding-top: 50px;
+}
+#footer {
+    background: url("/assets/img/bg-footer.png") repeat-x scroll 0 0 transparent;
+    height: 50px;
+    margin: -50px 0 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 999999;
+}
+.footer-wrap {
+    height: 50px;
+    margin: 0 auto;
+    width: 990px;
+}
+#footer div.firma {
+    float: right;
+    font-size: 12px;
+    line-height: 13px;
+    margin-top: 15px;
+    text-align: right;
+    width: 200px;
+    color: black;
+}
+#footer div.firma a{
+    text-decoration: none;
+    color: #000;
+}
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+

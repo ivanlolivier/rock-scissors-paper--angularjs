@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="gameApp">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Rock vs Paper vs Scissors</title>
+
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-theme.css" />
+	
+	<link rel="stylesheet" href="/assets/css/game.css" type="text/css" media="screen" />
+</head>
+
+<body ng-init="headerType=1">
+
+	<div id="header_content" class="container">
+		<div id="header" ng-show="headerType==1">
+			<img src="/assets/img/logo.jpg" style="height: 60px;" />
+			<h1 id="title">Rock vs Paper vs Scissors</h1>
+			<p>powered by <a href="http://www.ivanlolivier.com">Ivan L'olivier</a></p>
+		</div>
+	
+		<div id="header2" ng-show="headerType==2">
+           	<div class="navbar" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<h1 id="title" class="navbar-brand"><img src="/assets/img/logo.jpg" style="height: 45px;" />Rock vs Paper vs Scissors</h1>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/#play">Play</a></li>
+							<li><a href="/#history">History</a></li>
+							<li><a href="/#moves">Moves</a></li>
+							<li><a href="/">Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="content" ng-class="{backwhite: headerType==2}" style="position: relative;">
+			<div ng-if="!!message" class="alert alert-success" style="z-index: 2; width: 500px; margin: 0px auto 0px -250px; position: absolute; left: 50%;">
+				<strong>Success!</strong> {{ message }}
+			</div>
+			<div ng-view style="position:relative;"></div>
+		</div>
+	</div>
+
+	<script src="/assets/js/angular.min.js"></script>
+	<script src="/assets/js/angular-route.min.js"></script>
+	
+	<script src="/app/app.js"></script>
+	<script src="/app/services/factory.js"></script>
+	<script src="/app/controllers/signUpController.js"></script>
+	<script src="/app/controllers/winController.js"></script>
+	<script src="/app/controllers/movesController.js"></script>
+	<script src="/app/controllers/playController.js"></script>
+	<script src="/app/controllers/historyController.js"></script>
+
+</body>
+</html>

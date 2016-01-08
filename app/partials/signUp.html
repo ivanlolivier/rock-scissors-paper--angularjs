@@ -1,0 +1,16 @@
+<div class="signup-box">
+	<form id="form_admin_login" action="#">
+	<legend>Enter Player's Names</legend>
+		<div>
+			<label for="player1" style="margin-bottom: 0; margin-top: 0;">Player 1</label>
+			<input type="text" name="player1" ng-model="name1" class="form-control" />
+		</div>
+		<div>
+			<label for="player2" style="margin-bottom: 0; margin-top: 20px;">Player 2</label>
+			<input type="text" name="player2" ng-model="name2" class="form-control" />
+		</div>
+		<div style="margin-top:20px;">
+			<input type="button" value="Start Play" class="btn btn-primary btn-block" ng-click="goToPlay()" ng-disabled="!(!!name1 && !!name2)" />
+		</div>
+	</form>
+</div>
