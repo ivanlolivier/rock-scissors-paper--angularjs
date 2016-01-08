@@ -1,6 +1,6 @@
 Steps to execute the game:
 
-1. Extract .zip content
+1. Clone the repository
 2. Edit hosts file in your computer and add a new hostname pointing to localhost
 	example: "game 127.0.0.1"
 3. Create a virtualhost in your computer with the servername created before and pointing to the location of the files extracted in point 1
